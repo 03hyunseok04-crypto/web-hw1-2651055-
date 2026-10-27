@@ -41,7 +41,7 @@ main, .top, .hero, footer {
 
 .hero {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                      url("https://media.themoviedb.org/t/p/w300_and_h450_face/iXVaWbxmyPk4KZGZk5GGDGFieMX.jpg");
+                      url("https://cphoto.asiae.co.kr/listimglink/1/2023061808144767051_1687043687.jpg");
     background-size: cover;
     background-position: center;
     min-height: 40vh;
