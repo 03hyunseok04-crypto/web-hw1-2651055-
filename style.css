@@ -11,22 +11,24 @@ h1 {
     margin: 0;
 }
 
-
 main, .top, .hero, footer {
     max-width: 1100px;
     margin: 0 auto 24px;
 }
 
-
+/* 헤더 영역 수정: 명시적 배경색 부여 및 레이아웃 조정 */
 .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #121212; /* 배경색을 명시적으로 지정 */
+    padding: 16px 0;           /* 위아래 여백 추가 */
+    width: 100%;
 }
 
 .top nav ul {
     display: flex;
-    flex-direction: column; */
+    flex-direction: column;    /* 오류 주석(*/) 제거 완료 */
     gap: 8px;              
     list-style: none;
     margin: 0;
@@ -38,10 +40,9 @@ main, .top, .hero, footer {
     text-decoration: none;
 }
 
-
 .hero {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                      url("https://media.themoviedb.org/t/p/w300_and_h450_face/LSGpoSAlitss0KOvVakkeUToZo.jpg");
+                      url("https://themoviedb.org");
     background-size: cover;
     background-position: center;
     min-height: 40vh;
@@ -53,7 +54,6 @@ main, .top, .hero, footer {
     flex-direction: column;
     justify-content: center;
 }
-
 
 .board {
     display: grid;
@@ -94,7 +94,6 @@ main, .top, .hero, footer {
     border-radius: 4px;
 }
 
-
 footer {
     font-size: 0.9rem;
     color: #aaa;
@@ -102,14 +101,12 @@ footer {
     padding-top: 16px;
 }
 
-
 @media (min-width: 600px) {
     .top nav ul {
         flex-direction: row;
         gap: 20px;
     }
 }
-
 
 @media (min-width: 1024px) {
     .hero {
@@ -119,7 +116,6 @@ footer {
         font-size: 3rem;
     }
 }
-
 
 @media (prefers-color-scheme: dark) {
     .card {
