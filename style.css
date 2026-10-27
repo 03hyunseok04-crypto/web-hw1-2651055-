@@ -25,7 +25,7 @@ main, .top, .hero, footer {
     margin: 0 auto 24px;
 }
 
-
+/* 상단 정렬 및 네비게이션 가로 배치 */
 .top {
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@ main, .top, .hero, footer {
     color: var(--accent);
 }
 
-
+/* 메인 비주얼 배너 구역 */
 .hero {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                       url("https://asiae.co.kr");
@@ -68,14 +68,14 @@ main, .top, .hero, footer {
     justify-content: center;
 }
 
-
+/* 그리드 레이아웃 */
 .board {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--gap);
 }
 
-
+/* 개별 카드 컴포넌트 */
 .card {
     background: #fff;
     color: #222;
@@ -105,6 +105,13 @@ main, .top, .hero, footer {
     font-size: 1.2rem;
 }
 
+/* 라이트 모드 기준 기본 설명 글씨 색상 */
+.card-meta {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
 .badge {
     position: absolute;
     top: 10px;
@@ -117,7 +124,7 @@ main, .top, .hero, footer {
     z-index: 10;
 }
 
-
+/* 하단 디자인 */
 footer {
     font-size: 0.9rem;
     color: var(--text-muted);
@@ -126,7 +133,7 @@ footer {
     text-align: center;
 }
 
-
+/* 미디어 쿼리 반응형 */
 @media (min-width: 600px) {
     .top nav ul {
         flex-direction: row;
@@ -144,10 +151,14 @@ footer {
     }
 }
 
-
+/* 다크모드 대응 시스템 스타일 */
 @media (prefers-color-scheme: dark) {
     .card {
         background: var(--surface);
         color: var(--text);
+    }
+    /* 다크모드 시 설명 글자가 잘 보이도록 밝은 회색으로 변경 */
+    .card-meta {
+        color: var(--text-muted);
     }
 }
